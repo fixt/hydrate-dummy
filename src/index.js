@@ -14,7 +14,7 @@ const hydrateDummy = store => next => {
   return (action) => !hydrated ? hydrate() : next(action);
 };
 
-export const shouldHydrate = () => getCookie('hydrate_dummy', document);
+export const shouldHydrate = () => getCookie({ name: 'hydrate_dummy' }, document);
 export const HydrateDummyView = View;
 export const buildHydrateEvent = (dummyData) => (state) => ({ ...state, ...dummyData });
 

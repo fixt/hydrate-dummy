@@ -1,4 +1,5 @@
 import View from './view';
+import { getCookie } from './cookie';
 
 export const HYDRATE_DUMMY = 'HYDRATE_DUMMY';
 
@@ -14,7 +15,6 @@ const hydrateDummy = store => next => {
 };
 
 export const shouldHydrate = () => getCookie('hydrate_dummy', document);
-
 export const HydrateDummyView = View;
 export const buildHydrateEvent = (dummyData) => (state) => ({ ...state, ...dummyData });
 

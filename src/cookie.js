@@ -1,4 +1,4 @@
-const setCookie = ({
+export const setCookie = ({
   name,
   value,
   expirationInMillis,
@@ -20,7 +20,7 @@ const setCookie = ({
   doc.cookie = `${cookie}${expires}${domain}${path}${secured}`;
 };
 
-const getCookie = ({ name }, doc) => {
+export const getCookie = ({ name }, doc) => {
   doc = doc || document;
 
   const key = `${name}=`;
@@ -39,7 +39,6 @@ const getCookie = ({ name }, doc) => {
   return '';
 };
 
-const clearCookie = ({ name, secure = false }, doc) => {
+export const clearCookie = ({ name, secure = false }, doc) => {
   setCookie({ name, value: '', expirationInMillis: -1, secure }, doc);
 };
-

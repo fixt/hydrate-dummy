@@ -732,7 +732,7 @@ var hydrateDummy = function hydrateDummy(store) {
 };
 
 var shouldHydrate = exports.shouldHydrate = function shouldHydrate() {
-  return (0, _cookie.getCookie)('hydrate_dummy', document);
+  return (0, _cookie.getCookie)({ name: 'hydrate_dummy' }, document);
 };
 var HydrateDummyView = exports.HydrateDummyView = _view2.default;
 var buildHydrateEvent = exports.buildHydrateEvent = function buildHydrateEvent(dummyData) {

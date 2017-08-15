@@ -1,6 +1,6 @@
 {
   "name": "hydrate-dummy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Redux Middleware that allows you to hydrate your state with dummy data.",
   "main": "build/index.js",
   "scripts": {

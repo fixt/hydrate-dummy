@@ -669,7 +669,7 @@ var getCookie = exports.getCookie = function getCookie(_ref2, doc) {
   var key = name + '=';
   var cookies = doc.cookie.split(';');
 
-  var myCookie = cookies && cookies.find(function (cookie) {
+  var myCookie = cookies.find && cookies.find(function (cookie) {
     return cookie.includes(key);
   });
 

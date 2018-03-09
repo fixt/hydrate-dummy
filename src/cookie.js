@@ -26,7 +26,7 @@ export const getCookie = ({ name }, doc) => {
   const key = `${name}=`;
   const cookies = doc.cookie.split(';');
 
-  let myCookie = cookies.find((cookie) => cookie.includes(key));
+  let myCookie = cookies && cookies.find((cookie) => cookie.includes(key));
 
   if (myCookie) {
     myCookie = myCookie.replace(' ', '');
